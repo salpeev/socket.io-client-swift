@@ -408,11 +408,11 @@
 			};
 			buildConfigurationList = 572EF2111B51F12F00EEBB58 /* Build configuration list for PBXProject "Socket.IO-Client-Swift" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = 572EF20D1B51F12F00EEBB58;
 			productRefGroup = 572EF21A1B51F16C00EEBB58 /* Products */;
