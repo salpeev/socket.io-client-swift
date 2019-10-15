@@ -704,4 +704,20 @@ extension SocketEngine {
 
         didError(reason: "Engine URLSession became invalid")
     }
+    
+#if DEBUG
+    public func urlSession(_ session: URLSession,
+                    didReceive challenge: URLAuthenticationChallenge,
+                    completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust {
+            if let trust = challenge.protectionSpace.serverTrust {
+                let credential = URLCredential(trust: trust)
+                completionHandler(.useCredential, credential)
+                return
+            }
+        }
+        
+        completionHandler(.performDefaultHandling, nil)
+    }
+#endif
 }

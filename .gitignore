@@ -4,6 +4,7 @@
 *.xcodeproj
 .build/*
 Packages/*
+Carthage/*
 
 # Icon must end with two \r
 Icon
